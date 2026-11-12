@@ -1,0 +1,5 @@
+const $=id=>document.getElementById(id),msg=$("mensagem");
+document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{const c=b.dataset.tab==="cadastro";$("login").hidden=c;$("cadastro").hidden=!c;document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));msg.textContent=""});
+async function enviar(url,data){let r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}),d=await r.json();if(!r.ok)throw Error(d.erro||"Erro");return d}
+$("login").onsubmit=async e=>{e.preventDefault();try{let d=await enviar("/api/login",{email:$("emailLogin").value,senha:$("senhaLogin").value});location.href=d.usuario.tipo==="admin"?"admin.html":"index.html"}catch(x){msg.textContent=x.message}};
+$("cadastro").onsubmit=async e=>{e.preventDefault();if($("senha").value!==$("confirmar").value){msg.textContent="As senhas não são iguais.";return}try{await enviar("/api/cadastro",{nome:$("nome").value,email:$("email").value,senha:$("senha").value});location.href="index.html"}catch(x){msg.textContent=x.message}};

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Alien Survival — Última Fronteira</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header><a class="brand" href="#">☠ ALIEN <b>SURVIVAL</b></a><span id="status">● conectando...</span><a id="conta"
+            href="cadastro.html">ENTRAR / CADASTRAR</a><button id="sair" hidden>Sair</button></header>
+    <main>
+        <section id="menu" class="screen hero">
+            <div>
+                <p class="eyebrow">A HUMANIDADE ESTÁ NO LIMITE</p>
+                <h1>ALIEN<br><span>SURVIVAL</span></h1>
+                <h3>ÚLTIMA FRONTEIRA</h3>
+                <p>Uma colônia perdida. Criaturas à espreita. Dez fases entre você e a sobrevivência.</p>
+                <div class="actions"><button id="jogar" class="btn primary">▶ INICIAR MISSÃO</button><button
+                        id="verFases" class="btn">▦ ARQUIVO DE FASES</button><button id="verMercado" class="btn">✚
+                        MERCADINHO</button><button id="verComo" class="btn">? COMO JOGAR</button><button id="verAdmin"
+                        class="btn" hidden>⚙ PAINEL ADMINISTRATIVO</button></div>
+                <p id="saudacao"></p>
+            </div>
+            <div class="art">
+                <div class="orb">☠</div>
+                <p>PERIGO<br><b>CRÍTICO</b></p>
+            </div>
+        </section>
+        <section id="jogoTela" class="screen" hidden>
+            <div class="row">
+                <div>
+                    <p class="eyebrow">MISSÃO ATIVA</p>
+                    <h2 id="nomeFase"></h2>
+                </div><button id="sairJogo" class="btn">SAIR DA MISSÃO</button>
+            </div>
+            <div class="hud"><span>FASE <b id="faseNum"></b></span><span>VIDA <b id="vidaNum"></b></span><span>MOEDAS <b
+                        id="moedasNum"></b></span><span>TEMPO <b id="tempoNum"></b></span><span>ELIMINADOS <b
+                        id="killsNum"></b></span></div>
+            <div class="health">
+                <div id="healthBar"></div>
+            </div><canvas id="canvas" width="900" height="480"></canvas>
+            <p id="aviso">WASD para mover; E, G, J, L, P, N para atacar.</p>
+            <div class="mobile">
+                <div><button data-move="up">▲</button>
+                    <div><button data-move="left">◀</button><button data-move="down">▼</button><button
+                            data-move="right">▶</button></div>
+                </div>
+                <div class="attacks"><button data-attack="E">E</button><button data-attack="G">G</button><button
+                        data-attack="J">J</button><button data-attack="L">L</button><button
+                        data-attack="P">P</button><button data-attack="N">N</button></div>
+            </div>
+        </section>
+        <section id="fasesTela" class="screen" hidden><button class="btn back">← MENU</button>
+            <h2>ARQUIVO DE FASES</h2>
+            <div id="listaFases" class="grid"></div>
+        </section>
+        <section id="mercadoTela" class="screen" hidden><button class="btn back">← MENU</button>
+            <h2>MERCADINHO — <span id="moedasMercado">0</span> MOEDAS</h2>
+            <div class="items">
+                <article><b>⚔ ESPADA</b>
+                    <p>Aumenta o dano.</p><strong>50 moedas</strong><button class="btn buy"
+                        data-item="espada">COMPRAR</button>
+                </article>
+                <article><b>⌖ ARMA</b>
+                    <p>Ataca com projéteis.</p><strong>80 moedas</strong><button class="btn buy"
+                        data-item="arma">COMPRAR</button>
+                </article>
+                <article><b>☼ LANTERNA</b>
+                    <p>Aumenta o alcance.</p><strong>30 moedas</strong><button class="btn buy"
+                        data-item="lanterna">COMPRAR</button>
+                </article>
+                <article><b>✚ COMIDA</b>
+                    <p>Recupera 25 pontos de vida.</p><strong>20 moedas</strong><button class="btn buy"
+                        data-item="comida">COMPRAR</button>
+                </article>
+            </div>
+            <p id="msgMercado"></p>
+        </section>
+        <section id="comoTela" class="screen" hidden><button class="btn back">← MENU</button>
+            <h2>COMO JOGAR</h2>
+            <div class="manual">
+                <p><b>Movimento:</b> W/A/S/D ou os controles no celular.</p>
+                <p><b>Ataque:</b> E, G, J, L, P e N; cada tecla tem alcance e força diferentes.</p>
+                <p><b>Objetivo:</b> derrote as criaturas e chegue à saída verde à direita.</p>
+                <p><b>Recompensa:</b> 100 moedas por fase. Compre equipamentos no mercadinho.</p>
+                <p>Os inimigos perseguem você. As fases finais são mais difíceis.</p>
+            </div>
+        </section>
+        <section id="finalTela" class="screen final" hidden>
+            <p class="eyebrow">RELATÓRIO DA MISSÃO</p>
+            <h2 id="finalTitulo"></h2>
+            <p id="finalTexto"></p><button id="menuFinal" class="btn primary">VOLTAR AO MENU</button>
+        </section>
+    </main>
+    <footer>ALIEN SURVIVAL // ÚLTIMA FRONTEIRA — SOBREVIVA A QUALQUER CUSTO</footer>
+</body>
+
+</html>

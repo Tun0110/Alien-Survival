@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Conta | Alien Survival</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="cadastro.js"></script>
+</head>
+
+<body class="auth">
+    <main class="card"><a href="index.html">← Voltar ao jogo</a>
+        <p class="eyebrow">ÚLTIMA FRONTEIRA</p>
+        <h1>ALIEN <span>SURVIVAL</span></h1>
+        <div class="tabs"><button data-tab="login" class="active">Entrar</button><button data-tab="cadastro">Criar
+                conta</button></div>
+        <form id="login"><label>E-mail<input id="emailLogin" type="email" required></label><label>Senha<input
+                    id="senhaLogin" type="password" required></label><button class="btn primary">ENTRAR NA BASE</button>
+        </form>
+        <form id="cadastro" hidden><label>Nome de jogador<input id="nome" required
+                    minlength="2"></label><label>E-mail<input id="email" type="email" required></label><label>Senha
+                (mínimo 8 caracteres)<input id="senha" type="password" minlength="8" required></label><label>Confirmar
+                senha<input id="confirmar" type="password" minlength="8" required></label><button
+                class="btn primary">CRIAR CONTA</button></form>
+        <p id="mensagem"></p><small>As senhas são protegidas por hash no servidor.</small>
+    </main>
+</body>
+
+</html>

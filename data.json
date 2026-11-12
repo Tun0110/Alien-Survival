@@ -1,0 +1,30 @@
+{
+  "usuarios": [
+    {
+      "id": "1793201830261",
+      "nome": "Administrador",
+      "email": "admin@exemplo.com",
+      "hash": "$2a$12$GdFASoJfIpLjzh6TdFEvDO0M7NF4I1ASF47/BkVmYyAu1ub3gvKnC",
+      "tipo": "admin",
+      "criadoEm": "2026-10-28T15:37:10.479Z"
+    },
+    {
+      "id": "1793790856797",
+      "nome": "Yasmin",
+      "email": "nimsay.011.tun@gmail.com",
+      "hash": "$2a$12$Ayhypy9uvRRvogVMboHKiOJilztByuHapVB5vqHrgJV/nJDP/T4l6",
+      "tipo": "jogador",
+      "criadoEm": "2026-11-04T11:14:17.009Z"
+    }
+  ],
+  "resultados": [
+    {
+      "nome": "Yasmin",
+      "usuarioId": "1793790856797",
+      "fase": 1,
+      "moedas": 100,
+      "eliminados": 3,
+      "data": "2026-11-10T15:29:53.518Z"
+    }
+  ]
+}
